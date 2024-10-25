@@ -6,7 +6,7 @@
 /*   By: abastian <abastian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:20:08 by abastian          #+#    #+#             */
-/*   Updated: 2024/10/11 13:26:21 by abastian         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:41:03 by abastian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <unistd.h>
 
 char	*line_analyse(int fd, char *buffer, char *stash);
-char	*clean_stash(char *stash);
 char	*get_next_line(int fd);
 char	*ft_strdup(const char *s);
 size_t	ft_strlen(const char *c);

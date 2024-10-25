@@ -6,7 +6,7 @@
 #    By: abastian <abastian@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 13:57:56 by abastian          #+#    #+#              #
-#    Updated: 2024/10/16 17:19:14 by abastian         ###   ########.fr        #
+#    Updated: 2024/10/22 16:22:19 by abastian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,15 @@ FT_PRINTF_PATH = ft_printf/
 FT_PRINTF_FILE = libftprintf.a
 FT_PRINTF_LIB = $(FT_PRINTF_PATH)$(FT_PRINTF_FILE)
 
-MLX_PATH = minilibx/
+MLX_PATH = minilibx-linux/
 MLX_FILE = libmlx.a
 MLX_LIB = $(MLX_PATH)$(MLX_FILE)
 
-C_FILE = so_long.c map_parse.c error.c get_next_line.c utils.c flood_fill.c start_mlx.c \
+C_FILE = so_long.c map_parse.c error.c get_next_line.c utils.c flood_fill.c \
+		start_mlx.c \
 
 INC = -I ./includes/ \
-	-I ./minilibx/
+	-I ./minilibx-linux/
 
 SRC_PATH = ./sources/
 SRC = $(addprefix $(SRC_PATH),$(C_FILE))

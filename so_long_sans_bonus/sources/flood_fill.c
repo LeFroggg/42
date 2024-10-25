@@ -6,7 +6,7 @@
 /*   By: abastian <abastian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:52:00 by abastian          #+#    #+#             */
-/*   Updated: 2024/10/16 16:59:38 by abastian         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:30:37 by abastian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	flood_fill_collectables(char **grid, t_vector pos, t_game *game)
 
 	x = pos.x;
 	y = pos.y;
-	if (x < 0 || y < 0 || y >= game->map.map_size.y || x >= game->map.map_size.x)
+	if (x < 0 || y < 0 || y >= game->map.map_size.y
+		|| x >= game->map.map_size.x)
 		return ;
 	if (grid[y][x] == '1' || grid[y][x] == 'E' || grid[y][x] == 'X')
 		return ;
@@ -37,7 +38,8 @@ void	flood_fill_exit(char **grid, t_vector pos, t_game *game)
 
 	x = pos.x;
 	y = pos.y;
-	if (x < 0 || y < 0 || y >= game->map.map_size.y || x >= game->map.map_size.x)
+	if (x < 0 || y < 0 || y >= game->map.map_size.y
+		|| x >= game->map.map_size.x)
 		return ;
 	if (grid[y][x] == '1' || grid[y][x] == 'X')
 		return ;
@@ -55,13 +57,13 @@ void	flood_fill_check(char **grid, char c, t_game *game)
 
 	i = 0;
 	j = 0;
-	while(grid[i])
+	while (grid[i])
 	{
 		j = 0;
-		while(grid[i][j])
+		while (grid[i][j])
 		{
 			if (grid[i][j] == c)
-				error_game("Unplayable map (Unreachable collectible and/or exit)", game);
+				error_game("Unreachable collectible and/or exit", game);
 			j++;
 		}
 		i++;
